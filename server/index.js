@@ -8,11 +8,7 @@ import cookieParser from "cookie-parser";
 import cors  from "cors";
 import path from "path";
 const Port = process.env.PORT || 5000;
-app.use(cors({
-    origin: "*", // Allow all origins (for testing)
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+
 
 dotenv.config();
 
@@ -31,6 +27,13 @@ mongoose
 const __dirname = path.resolve();
 
 const app = express();
+
+app.use(cors({
+    origin: "*", // Allow all origins (for testing)
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 
 app.use(express.json());
 //allow JSON data
