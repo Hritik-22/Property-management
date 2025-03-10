@@ -5,9 +5,9 @@ import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
 import listingRouter from "./routes/listing.route.js";
 import cookieParser from "cookie-parser";
+import cors  from "cors";
 import path from "path";
 const Port = process.env.PORT || 5000;
-const cors = require("cors");
 app.use(cors({
     origin: "*", // Allow all origins (for testing)
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
