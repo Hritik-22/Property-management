@@ -50,10 +50,6 @@ app.use("/api/listing", listingRouter); //api/listing
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
-app.get("*", (req, res) => {
-  res.send(404).json({message :"Route Not Found please check your Route"});
-});
-
 //Errors Handler
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
