@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Contact = ({ listing }) => {
+const Contact = ({ listing }) => { 
   const [landlord, setLandlord] = useState(null);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(true);
