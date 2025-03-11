@@ -29,7 +29,7 @@ const __dirname = path.resolve();
 const app = express();
 
 app.use(cors({
-  origin: "https://property-management-nkav24j10-hritik-22s-projects.vercel.app",
+  origin: "https://property-management-new.vercel.app/",
   methods: ["GET", "POST", "PUT", "DELETE" , "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
